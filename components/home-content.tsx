@@ -129,28 +129,16 @@ export default function HomeContent() {
             <ArrowUpRight size={16} />
           </a>
         </div>
-        <div className="story-visual" data-reveal aria-label="3 Monkey Burger House dış cephe konsepti">
-          <div className="story-facade" aria-hidden="true">
-            <div className="story-facade-sky" />
-            <div className="story-facade-building">
-              <div className="story-facade-sign">
-                <img
-                  src="/images/3-monkey-logo-transparent.png"
-                  alt=""
-                  width="720"
-                  height="360"
-                />
-              </div>
-              <div className="story-facade-windows">
-                <span />
-                <span />
-                <span />
-              </div>
-              <div className="story-facade-door" />
-              <div className="story-facade-awning" />
-            </div>
-            <div className="story-facade-surface" />
-            <span className="story-facade-caption">BOZÜYÜK / 3 MONKEY</span>
+        <div className="story-visual" data-reveal aria-label="3 Monkey Burger House Bozüyük dış cephesi">
+          <div className="story-photo">
+            <img
+              src="/images/3-monkey-storefront.png"
+              alt="3 Monkey Burger House Bozüyük dış cephesi ve açık hava oturma alanı"
+              width="2266"
+              height="1452"
+              loading="lazy"
+            />
+            <span className="story-photo-caption">BOZÜYÜK / 3 MONKEY</span>
           </div>
         </div>
       </section>
