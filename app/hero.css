@@ -130,36 +130,16 @@
   color: #c0bdb2;
 }
 .scroll-cue {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+  display: block;
   position: absolute;
   bottom: 28px;
   left: 5%;
   z-index: 5;
-  color: #dedbcf;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-.scroll-cue-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 15px;
-  color: inherit;
-}
-.scroll-cue-link svg {
-  animation: nudge 2.5s infinite;
-}
-.scroll-phone {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
   color: var(--secondary);
-  letter-spacing: 1.4px;
-}
-.scroll-phone a {
-  color: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  text-shadow: 0 2px 14px #000;
 }
 .hero-index {
   position: absolute;
@@ -259,19 +239,9 @@
   .scroll-cue {
     bottom: 26px;
     left: 6%;
-    font-size: 9px;
-    letter-spacing: 1.3px;
-    gap: 9px;
-    flex-wrap: wrap;
-    max-width: 72%;
-  }
-  .scroll-cue-link {
-    gap: 10px;
-  }
-  .scroll-phone {
-    gap: 6px;
-    letter-spacing: 0.8px;
-    font-size: 8px;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+    max-width: 86%;
   }
   .hero-index {
     bottom: 25px;

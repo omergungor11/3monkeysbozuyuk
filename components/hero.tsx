@@ -1,6 +1,6 @@
 import Link from "next/link";
 import HeroSmoke from "@/components/hero-smoke";
-import { ArrowDown, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { restaurant } from "@/lib/restaurant";
 
 export default function Hero() {
@@ -46,16 +46,9 @@ export default function Hero() {
           MENÜYÜ KEŞFET <ArrowUpRight size={19} />
         </Link>
       </div>
-      <div className="scroll-cue">
-        <a className="scroll-cue-link" href="#lezzet">
-          <span>LEZZETE DOĞRU</span>
-          <ArrowDown size={16} />
-        </a>
-        <span className="scroll-phone">
-          <span aria-hidden="true">•</span>
-          <a href={restaurant.phoneHref}>{restaurant.phone}</a>
-        </span>
-      </div>
+      <a className="scroll-cue hero-phone" href={restaurant.phoneHref}>
+        +90 533 515 11 26
+      </a>
       <span className="hero-index">BOZÜYÜK / BİLECİK</span>
     </section>
   );

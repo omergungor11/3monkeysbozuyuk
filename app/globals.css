@@ -388,15 +388,6 @@ h3 {
     transform: translateY(5px);
   }
 }
-@keyframes breathe {
-  0%,
-  100% {
-    transform: translate3d(0, var(--smoke-shift), 0) scale(1.03);
-  }
-  50% {
-    transform: translate3d(0, calc(var(--smoke-shift) - 15px), 0) scale(1.07);
-  }
-}
 @keyframes ticker-scroll {
   from {
     transform: translateX(0);
@@ -628,41 +619,10 @@ h3 {
 .featured .card-heading {
   color: var(--secondary);
 }
-.smoke-section {
-  position: relative;
-  min-height: 640px;
-  overflow: hidden;
-  background: var(--background);
-  display: flex;
-  align-items: center;
-  padding: 90px 6%;
-  isolation: isolate;
-}
-.smoke-backdrop {
-  position: absolute;
-  inset: 0;
-  --smoke-shift: 0px;
-  background:
-    linear-gradient(90deg, #090a08 12%, #090a08e8 37%, #090a0820 100%),
-    url("/images/three-burgers-hero.png") 85% 65% / cover;
-  z-index: -1;
-  animation: breathe 15s ease-in-out infinite;
-}
-.smoke-copy {
-  max-width: 720px;
-}
-.smoke-copy h2 {
-  font-size: clamp(60px, 6.4vw, 98px);
-}
-.smoke-copy > p:not(.section-kicker) {
-  color: #b3b3a7;
-  line-height: 1.8;
-  margin: 30px 0;
-}
 .story-strip {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 100px;
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+  gap: 80px;
   background: var(--background);
   color: var(--foreground);
 }
@@ -725,62 +685,65 @@ h3 {
   font-size: 10px;
   letter-spacing: 2.2px;
 }
-.instagram-line {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 13px;
-  font-weight: 700;
-  margin-top: 38px;
-}
 .site-footer {
-  padding: 45px 6% 24px;
+  padding: 78px 6% 30px;
   background: #10100e;
 }
-.footer-top {
+.footer-center {
+  max-width: 760px;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  gap: 40px;
-  padding-bottom: 38px;
+  text-align: center;
 }
 .footer-logo {
-  width: 160px;
+  width: 220px;
 }
-.footer-top p {
-  font-size: 14px;
-  font-weight: 700;
-}
-.footer-top p span {
-  color: #86877d;
-  font-size: 12px;
-  font-weight: 400;
-}
-.social-link {
+.footer-socials {
   display: flex;
   align-items: center;
-  gap: 16px;
-  font-size: 13px;
+  gap: 18px;
+  margin-top: 22px;
 }
-.social-link:hover {
+.footer-socials a {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #ffffff1f;
+  border-radius: 50%;
+  color: #d0cfc4;
+  transition: color 0.25s, border-color 0.25s, transform 0.25s;
+}
+.footer-socials a:hover {
   color: var(--secondary);
+  border-color: var(--secondary);
+  transform: translateY(-3px);
 }
-.footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid #ffffff17;
-  padding-top: 25px;
-  gap: 24px;
-  color: #95968c;
-  font-size: 12px;
+.footer-address {
+  color: #b0b0a4;
+  font-size: 14px;
+  margin-top: 24px;
+  line-height: 1.7;
 }
-.footer-bottom nav {
+.footer-nav {
   display: flex;
   gap: 26px;
+  margin-top: 26px;
+  color: #bcbcb0;
+  font-size: 13px;
 }
-.footer-bottom a:hover {
+.footer-nav a:hover {
   color: var(--secondary);
+}
+.footer-copyright {
+  border-top: 1px solid #ffffff17;
+  width: 100%;
+  padding-top: 24px;
+  margin-top: 30px;
+  color: #85867c;
+  font-size: 12px;
 }
 /* Interior pages */
 .inner-page {
@@ -1135,9 +1098,6 @@ h3 {
     padding-left: 6%;
     padding-right: 6%;
   }
-  .footer-bottom {
-    flex-wrap: wrap;
-  }
   .contact-location {
     padding: 40px 30px;
   }
@@ -1247,22 +1207,6 @@ h3 {
   .signature-card:nth-child(n) {
     transition-delay: 0s;
   }
-  .smoke-section {
-    padding: 70px 6%;
-    min-height: 540px;
-  }
-  .smoke-copy h2 {
-    font-size: 60px;
-  }
-  .smoke-backdrop {
-    background-position: 72% 60%;
-    background-image:
-      linear-gradient(90deg, #090a08ed, #090a0888),
-      url("/images/three-burgers-hero.png");
-  }
-  .smoke-copy > p:not(.section-kicker) {
-    font-size: 14px;
-  }
   .story-strip {
     grid-template-columns: 1fr;
     gap: 24px;
@@ -1274,32 +1218,22 @@ h3 {
   .story-photo {
     box-shadow: 10px 14px 0 #df32251c;
   }
-  .instagram-line {
-    font-size: 12px;
-  }
-  .footer-top {
-    flex-wrap: wrap;
-    gap: 28px;
+  .footer-center {
+    max-width: none;
   }
   .footer-logo {
-    width: 130px;
+    width: 180px;
   }
-  .footer-top p {
+  .footer-socials {
+    gap: 12px;
+  }
+  .footer-address {
     font-size: 12px;
+    max-width: 300px;
   }
-  .social-link {
-    width: 100%;
-    font-size: 12px;
-  }
-  .footer-bottom {
-    align-items: start;
-    flex-direction: column;
+  .footer-nav {
+    gap: 20px;
     font-size: 11px;
-    gap: 18px;
-  }
-  .footer-bottom nav {
-    gap: 22px;
-    font-size: 13px;
   }
   .inner-page {
     padding-top: 82px;
@@ -1472,9 +1406,6 @@ h3 {
   }
   .assembly-sticky {
     position: relative;
-  }
-  .smoke-backdrop {
-    animation: none;
   }
   .ingredient {
     will-change: auto;

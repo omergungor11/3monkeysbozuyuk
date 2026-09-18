@@ -22,8 +22,6 @@ export default function Motion() {
       observer.observe(el);
     });
     const hero = document.querySelector<HTMLElement>(".hero");
-    const smokeSection = document.querySelector<HTMLElement>(".smoke-section");
-    const smokeBackdrop = document.querySelector<HTMLElement>(".smoke-backdrop");
     let frame = 0;
     const update = () => {
       frame = 0;
@@ -31,13 +29,6 @@ export default function Motion() {
         const y = Math.min(window.scrollY, window.innerHeight);
         hero.style.setProperty("--hero-shift", y * 0.13 + "px");
         hero.style.setProperty("--copy-shift", y * 0.2 + "px");
-      }
-      if (smokeSection && smokeBackdrop && !media.matches) {
-        const bounds = smokeSection.getBoundingClientRect();
-        const travel = window.innerHeight + bounds.height;
-        const progress = (window.innerHeight - bounds.top) / travel;
-        const shift = Math.max(-110, Math.min(110, (0.5 - progress) * 220));
-        smokeBackdrop.style.setProperty("--smoke-shift", `${shift}px`);
       }
     };
     const onScroll = () => {
@@ -50,7 +41,6 @@ export default function Motion() {
         els.forEach((el) => el.classList.add("is-visible"));
         hero?.style.setProperty("--hero-shift", "0px");
         hero?.style.setProperty("--copy-shift", "0px");
-        smokeBackdrop?.style.setProperty("--smoke-shift", "0px");
       }
     };
     media.addEventListener("change", reset);

@@ -1,10 +1,21 @@
 import Link from "next/link";
-import { ArrowUpRight, Camera as Instagram } from "lucide-react";
+import { MapPin, Phone } from "lucide-react";
 import { restaurant } from "@/lib/restaurant";
+
+function InstagramGlyph() {
+  return (
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.8">
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
 export default function SiteFooter() {
   return (
     <footer className="site-footer">
-      <div className="footer-top">
+      <div className="footer-center">
         <Link className="footer-logo" href="/" aria-label="Ana sayfa">
           <img
             src="/images/3-monkey-logo-transparent.png"
@@ -13,28 +24,24 @@ export default function SiteFooter() {
             height="90"
           />
         </Link>
-        <p>
-          Üç maymun. Tek tutku.
-          <br />
-          <span>Bozüyük / Bilecik</span>
-        </p>
-        <a
-          href={restaurant.instagram}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="social-link"
-        >
-          <Instagram size={19} /> @3monkeyburger_boz <ArrowUpRight size={18} />
-        </a>
-      </div>
-      <div className="footer-bottom">
-        <span>© 2026 3 Monkey Burger House · Konsept çalışma</span>
-        <nav aria-label="Alt menü">
+        <div className="footer-socials" aria-label="Sosyal ve iletişim bağlantıları">
+          <a href={restaurant.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <InstagramGlyph />
+          </a>
+          <a href={restaurant.phoneHref} aria-label="Telefon">
+            <Phone size={20} />
+          </a>
+          <a href={restaurant.maps} target="_blank" rel="noopener noreferrer" aria-label="Haritayı aç">
+            <MapPin size={20} />
+          </a>
+        </div>
+        <p className="footer-address">{restaurant.address}</p>
+        <nav className="footer-nav" aria-label="Alt menü">
           <Link href="/menu">Menü</Link>
           <Link href="/hakkimizda">Hikâyemiz</Link>
           <Link href="/iletisim">İletişim</Link>
         </nav>
-        <span>Sahne görselleri temsilidir.</span>
+        <p className="footer-copyright">© 2026 3 Monkey Burger House · Konsept çalışma</p>
       </div>
     </footer>
   );

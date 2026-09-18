@@ -1,10 +1,10 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { ArrowDown, RotateCcw } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 const layers = [
   {
     name: "Brioche ekmeği",
-    description: "Her şey güzel bir başlangıç ister.",
+    description: "Yumuşak, tereyağlı brioche ekmeğiyle başlar.",
     start: 0,
     end: 440,
     y: -300,
@@ -13,7 +13,7 @@ const layers = [
   },
   {
     name: "Sos & eşlikçiler",
-    description: "Her ısırığa ayrı bir karakter.",
+    description: "Monkey sosu ve eşlikçileri her ısırığa lezzet katar.",
     start: 440,
     end: 780,
     y: -180,
@@ -22,7 +22,7 @@ const layers = [
   },
   {
     name: "Cheddar",
-    description: "Aradaki o eriyen mutluluk.",
+    description: "Eriyen cheddar, burgerin sıcak ve kremamsı katmanı.",
     start: 780,
     end: 1125,
     y: -60,
@@ -31,7 +31,7 @@ const layers = [
   },
   {
     name: "Dana köftesi",
-    description: "Burgerin tam kalbi.",
+    description: "Izgarada mühürlenen dana köftesi lezzetin merkezinde.",
     start: 1125,
     end: 1480,
     y: 60,
@@ -40,7 +40,7 @@ const layers = [
   },
   {
     name: "Taze yeşillikler",
-    description: "Dengenin çıtır tarafı.",
+    description: "Taze yeşillikler her lokmaya ferah bir çıtırlık verir.",
     start: 1480,
     end: 1800,
     y: 180,
@@ -49,7 +49,7 @@ const layers = [
   },
   {
     name: "Kızarmış taban",
-    description: "Bütün lezzeti bir arada tutar.",
+    description: "Kızarmış alt ekmek tüm katmanları bir arada tutar.",
     start: 1800,
     end: 2172,
     y: 300,
@@ -59,7 +59,6 @@ const layers = [
 ];
 export default function BurgerAssembly() {
   const root = useRef<HTMLElement>(null);
-  const [assembled, setAssembled] = useState(false);
   const [stage, setStage] = useState(0);
   const [reduced, setReduced] = useState(false);
   useEffect(() => {
@@ -80,8 +79,7 @@ export default function BurgerAssembly() {
         0,
         Math.min(1, -rect.top / Math.max(1, rect.height - innerHeight)),
       );
-      const p =
-        assembled || reduced ? 1 : Math.min(1, Math.max(0, (raw - 0.08) / 0.8));
+      const p = reduced ? 1 : Math.min(1, Math.max(0, (raw - 0.08) / 0.8));
       const eased = p * p * (3 - 2 * p);
       section.style.setProperty("--assembly", String(eased));
       setStage(p > 0.85 ? 2 : p > 0.3 ? 1 : 0);
@@ -111,7 +109,7 @@ export default function BurgerAssembly() {
       removeEventListener("resize", schedule);
       cancelAnimationFrame(frame);
     };
-  }, [assembled, reduced]);
+  }, [reduced]);
   return (
     <section
       className="assembly-section"
@@ -140,16 +138,6 @@ export default function BurgerAssembly() {
               <ArrowDown size={18} />
               <span>Kaydır. Lezzet bir araya gelsin.</span>
             </div>
-          )}
-          {!reduced && (
-            <button
-              className="text-button"
-              onClick={() => setAssembled(!assembled)}
-              aria-pressed={assembled}
-            >
-              <RotateCcw size={14} />
-              {assembled ? "Kaydırma animasyonuna dön" : "Birleşmiş halini gör"}
-            </button>
           )}
         </div>
         <div

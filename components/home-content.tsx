@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, Camera as Instagram } from "lucide-react";
-import { restaurant } from "@/lib/restaurant";
+import { ArrowUpRight } from "lucide-react";
 import BurgerAssembly from "@/components/burger-assembly";
 export default function HomeContent() {
   return (
@@ -83,30 +82,35 @@ export default function HomeContent() {
               Kendine has bir lezzet.
             </p>
           </Link>
-        </div>
-      </section>
-      <section className="smoke-section">
-        <div className="smoke-backdrop" aria-hidden="true" />
-        <div className="smoke-copy" data-reveal>
-          <p className="section-kicker">03 / DUMANI ÜSTÜNDE</p>
-          <h2>
-            BAZI ŞEYLER
-            <br />
-            <em>BEKLEMEYE GELMEZ.</em>
-          </h2>
-          <p>
-            İyi bir burger. Güzel bir muhabbet.
-            <br />
-            Buluşma noktası belli: 3 Monkey Bozüyük.
-          </p>
-          <Link href="/iletisim" className="button yellow">
-            BİZE UĞRA <ArrowUpRight size={19} />
+          <Link href="/menu#burgerler" className="signature-card" data-reveal>
+            <div className="card-image crop-center">
+              <img src="/images/three-burgers-hero.png" alt="Monkey Honey burger konsepti" loading="lazy" />
+              <span className="card-number">04</span>
+            </div>
+            <div className="card-heading"><h3>MONKEY HONEY</h3><ArrowUpRight /></div>
+            <p>Ballı parmesan ve cheddarın tatlı-tuzlu dengesi.<br />Her lokmada küçük bir sürpriz.</p>
+          </Link>
+          <Link href="/menu#burgerler" className="signature-card" data-reveal>
+            <div className="card-image crop-right">
+              <img src="/images/three-burgers-hero.png" alt="Monkey Trüf burger konsepti" loading="lazy" />
+              <span className="card-number">05</span>
+            </div>
+            <div className="card-heading"><h3>MONKEY TRÜF</h3><ArrowUpRight /></div>
+            <p>Trüflü mayonez, cheddar ve karamelize soğan.<br />Yoğun ama dengeli bir tat.</p>
+          </Link>
+          <Link href="/menu#burgerler" className="signature-card" data-reveal>
+            <div className="card-image">
+              <img src="/images/visne-original.png" alt="Dana bacon burger konsepti" loading="lazy" />
+              <span className="card-number">06</span>
+            </div>
+            <div className="card-heading"><h3>DANA BACON</h3><ArrowUpRight /></div>
+            <p>Dana bacon, cheddar ve Monkey sosu.<br />Dolu dolu, tam kıvamında.</p>
           </Link>
         </div>
       </section>
       <section className="story-strip section-pad">
         <div className="story-copy" data-reveal>
-          <p className="section-kicker">BURGER BAHANE. TUTKU ŞAHANE.</p>
+          <p className="section-kicker">İYİ BURGER, GÜZEL MUHABBET.</p>
           <h2>
             BİZİ BİR DE
             <br />
@@ -119,15 +123,6 @@ export default function HomeContent() {
           <Link href="/hakkimizda" className="text-link">
             Hikâyemiz <ArrowUpRight size={20} />
           </Link>
-          <a
-            className="instagram-line"
-            href={restaurant.instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Instagram size={18} /> @3monkeyburger_boz{" "}
-            <ArrowUpRight size={16} />
-          </a>
         </div>
         <div className="story-visual" data-reveal aria-label="3 Monkey Burger House Bozüyük dış cephesi">
           <div className="story-photo">
