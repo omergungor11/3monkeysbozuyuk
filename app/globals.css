@@ -28,15 +28,15 @@
   --popover-foreground: #f4f0e6;
   --primary: #ed302b;
   --primary-foreground: #fff;
-  --secondary: #f5c928;
+  --secondary: #fdf31f;
   --secondary-foreground: #10100e;
   --muted: #23231f;
   --muted-foreground: #b2b1a7;
-  --accent: #f5c928;
+  --accent: #fdf31f;
   --accent-foreground: #10100e;
   --border: #ffffff25;
   --input: #ffffff25;
-  --ring: #f5c928;
+  --ring: #fdf31f;
   --radius: 0;
 }
 @theme inline {
@@ -202,7 +202,7 @@ em {
   color: var(--background);
 }
 .button.yellow:hover {
-  background: #ffda4f;
+  background: var(--secondary);
 }
 .ticker {
   background: var(--secondary);
