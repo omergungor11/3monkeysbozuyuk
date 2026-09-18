@@ -27,10 +27,11 @@ export default function Hero() {
         </p>
         <h1 id="hero-title">
           <span className="hero-title-solid">
-            İLK ISIRIKTA<span className="hero-title-dot">.</span>
+            <span className="hero-title-accent">İLK</span> ISIRIKTA
+            <span className="hero-title-dot">.</span>
           </span>
           <span className="hero-title-glass">
-            AKLINDA KALIR<span className="hero-title-dot">.</span>
+            AKLINDA <span className="hero-title-accent hero-title-yellow">KALIR.</span>
           </span>
         </h1>
       </div>
