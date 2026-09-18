@@ -391,10 +391,10 @@ h3 {
 @keyframes breathe {
   0%,
   100% {
-    transform: scale(1.03) translateY(0);
+    transform: translate3d(0, var(--smoke-shift), 0) scale(1.03);
   }
   50% {
-    transform: scale(1.07) translateY(-15px);
+    transform: translate3d(0, calc(var(--smoke-shift) - 15px), 0) scale(1.07);
   }
 }
 @keyframes ticker-scroll {
@@ -641,6 +641,7 @@ h3 {
 .smoke-backdrop {
   position: absolute;
   inset: 0;
+  --smoke-shift: 0px;
   background:
     linear-gradient(90deg, #090a08 12%, #090a08e8 37%, #090a0820 100%),
     url("/images/three-burgers-hero.png") 85% 65% / cover;
