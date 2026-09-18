@@ -23,16 +23,20 @@ export default function Hero() {
       <HeroSmoke className="hero-smoke" />
       <div className="hero-copy">
         <p className="eyebrow">
-          <span /> BOZÜYÜK’ÜN BURGER HOUSE’U
+          <span /> BOZÜYÜK’ÜN EN İYİ BURGERİ
         </p>
         <h1 id="hero-title">
-          <span className="hero-title-solid">ÜÇ MAYMUN.</span>
-          <span className="hero-title-glass">TEK TUTKU.</span>
+          <span className="hero-title-solid">
+            İLK ISIRIKTA<span className="hero-title-dot">.</span>
+          </span>
+          <span className="hero-title-glass">
+            AKLINDA KALIR<span className="hero-title-dot">.</span>
+          </span>
         </h1>
       </div>
       <div className="hero-bottom">
         <p>
-          İlk ısırıkta anlarsın.
+          Dumanı üstünde, tam kararında.
           <br />
           <span>Gerisi tamamen iştah meselesi.</span>
         </p>

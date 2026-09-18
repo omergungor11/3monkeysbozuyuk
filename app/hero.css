@@ -92,10 +92,15 @@
 }
 .hero-title-glass {
   color: rgb(255 255 255 / 52%);
-  -webkit-text-stroke: 1.5px rgb(255 255 255 / 90%);
+  -webkit-text-stroke: 1.5px var(--primary);
   text-shadow: 0 2px 20px rgb(0 0 0 / 25%);
   mix-blend-mode: normal;
   margin-top: 8px;
+}
+.hero-title-dot {
+  color: var(--secondary);
+  -webkit-text-stroke: 0;
+  text-shadow: none;
 }
 .hero-bottom {
   position: absolute;
@@ -194,7 +199,7 @@
     width: 22px;
   }
   .hero h1 {
-    font-size: clamp(67px, 16.7vw, 127px);
+    font-size: clamp(46px, 13.7vw, 105px);
     line-height: 0.9;
     letter-spacing: -0.6px;
     margin-top: 22px;
@@ -202,7 +207,7 @@
   .hero-title-glass {
     margin-top: 5px;
     color: rgb(255 255 255 / 56%);
-    -webkit-text-stroke: 1.2px rgb(255 255 255 / 90%);
+    -webkit-text-stroke: 1.2px var(--primary);
   }
   .hero-bottom {
     left: 6%;
@@ -258,7 +263,7 @@
 }
 @media (max-width: 360px) {
   .hero h1 {
-    font-size: 15.5vw;
+    font-size: 13.5vw;
   }
   .hero-copy {
     top: 122px;
