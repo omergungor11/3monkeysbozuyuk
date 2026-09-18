@@ -142,8 +142,24 @@
   font-weight: 700;
   letter-spacing: 2px;
 }
-.scroll-cue svg {
+.scroll-cue-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  color: inherit;
+}
+.scroll-cue-link svg {
   animation: nudge 2.5s infinite;
+}
+.scroll-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--secondary);
+  letter-spacing: 1.4px;
+}
+.scroll-phone a {
+  color: inherit;
 }
 .hero-index {
   position: absolute;
@@ -245,7 +261,17 @@
     left: 6%;
     font-size: 9px;
     letter-spacing: 1.3px;
+    gap: 9px;
+    flex-wrap: wrap;
+    max-width: 72%;
+  }
+  .scroll-cue-link {
     gap: 10px;
+  }
+  .scroll-phone {
+    gap: 6px;
+    letter-spacing: 0.8px;
+    font-size: 8px;
   }
   .hero-index {
     bottom: 25px;

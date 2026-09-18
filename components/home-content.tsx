@@ -11,7 +11,7 @@ export default function HomeContent() {
           <div>
             <p className="section-kicker">02 / SENİN TARAFIN HANGİSİ?</p>
             <h2>
-              AYNI TUTKU.
+              AYNI KALİTE.
               <br />
               <em>BAŞKA KARAKTERLER.</em>
             </h2>
@@ -105,15 +105,13 @@ export default function HomeContent() {
         </div>
       </section>
       <section className="story-strip section-pad">
-        <div data-reveal>
+        <div className="story-copy" data-reveal>
           <p className="section-kicker">BURGER BAHANE. TUTKU ŞAHANE.</p>
           <h2>
             BİZİ BİR DE
             <br />
             <em>YAKINDAN TANI.</em>
           </h2>
-        </div>
-        <div data-reveal>
           <p>
             Klasik bir cheeseburger’den vişnenin sürprizine uzanan bir menü.
             Bozüyük’te bir masanın etrafında buluşmak için bolca sebep.
@@ -130,6 +128,30 @@ export default function HomeContent() {
             <Instagram size={18} /> @3monkeyburger_boz{" "}
             <ArrowUpRight size={16} />
           </a>
+        </div>
+        <div className="story-visual" data-reveal aria-label="3 Monkey Burger House dış cephe konsepti">
+          <div className="story-facade" aria-hidden="true">
+            <div className="story-facade-sky" />
+            <div className="story-facade-building">
+              <div className="story-facade-sign">
+                <img
+                  src="/images/3-monkey-logo-transparent.png"
+                  alt=""
+                  width="720"
+                  height="360"
+                />
+              </div>
+              <div className="story-facade-windows">
+                <span />
+                <span />
+                <span />
+              </div>
+              <div className="story-facade-door" />
+              <div className="story-facade-awning" />
+            </div>
+            <div className="story-facade-surface" />
+            <span className="story-facade-caption">BOZÜYÜK / 3 MONKEY</span>
+          </div>
         </div>
       </section>
     </>
