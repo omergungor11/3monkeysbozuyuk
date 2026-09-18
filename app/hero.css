@@ -1,0 +1,341 @@
+/* Full-viewport food scene. Portrait art direction is supplied by <picture>. */
+.hero {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  height: 100svh;
+  min-height: 0;
+  max-height: none;
+  overflow: hidden;
+  background: #0d0d0b;
+}
+.hero-picture {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: block;
+}
+.hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center 60%;
+  mask-image: none;
+  transform: scale(1.015) translateY(var(--hero-shift, 0px));
+  will-change: transform;
+}
+.hero-shade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    #08090865 0%,
+    #08090810 22%,
+    transparent 49%,
+    #08090810 68%,
+    #080908c2 100%
+  );
+}
+.hero:after {
+  display: none;
+}
+.hero-copy {
+  position: absolute;
+  top: clamp(130px, 17svh, 200px);
+  left: 5%;
+  right: 5%;
+  z-index: 4;
+  padding: 0;
+  text-align: center;
+  transform: translateY(var(--copy-shift, 0px));
+  pointer-events: none;
+  will-change: transform;
+}
+.eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #dddccf;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+.eyebrow span {
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: var(--secondary);
+}
+.hero-copy .eyebrow {
+  animation: enter 1s 0.1s both;
+}
+.hero h1 {
+  margin: 22px 0 0;
+  font-size: clamp(86px, 11.5vw, 190px);
+  line-height: 0.84;
+  letter-spacing: -1.5px;
+  animation: enter 1.15s 0.2s both;
+}
+.hero-title-solid,
+.hero-title-glass {
+  display: block;
+}
+.hero-title-solid {
+  color: #f4f0e6;
+  text-shadow: 0 3px 25px #0003;
+}
+.hero-title-glass {
+  color: #f5c9282e;
+  -webkit-text-stroke: 1.5px #f5c928dc;
+  text-shadow: 0 0 35px #f5c92810;
+  mix-blend-mode: screen;
+  margin-top: 8px;
+}
+.hero-bottom {
+  position: absolute;
+  bottom: 87px;
+  left: 5%;
+  right: 5%;
+  z-index: 5;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  animation: enter 1s 0.4s both;
+}
+.hero-bottom p {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.7;
+  text-shadow: 0 2px 12px #000;
+}
+.hero-bottom p span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #c0bdb2;
+}
+.scroll-cue {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: absolute;
+  bottom: 28px;
+  left: 5%;
+  z-index: 5;
+  color: #dedbcf;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.scroll-cue svg {
+  animation: nudge 2.5s infinite;
+}
+.hero-index {
+  position: absolute;
+  bottom: 27px;
+  right: 5%;
+  z-index: 5;
+  color: #b6b5aa;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+.hero-smoke {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+@media (min-width: 1600px) {
+  .hero-copy {
+    top: 15svh;
+  }
+  .hero h1 {
+    font-size: min(12vw, 210px);
+  }
+}
+@media (max-width: 800px) {
+  .hero {
+    height: 100svh;
+    min-height: 0;
+    max-height: none;
+  }
+  .hero-picture {
+    inset: 0;
+  }
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    object-fit: cover;
+    object-position: 50% 57%;
+    transform: scale(1.01) translateY(var(--hero-shift, 0px));
+  }
+  .hero-copy {
+    top: clamp(160px, 24svh, 250px);
+    left: 4%;
+    right: 4%;
+    padding: 0;
+  }
+  .eyebrow {
+    font-size: 9px;
+    letter-spacing: 1.8px;
+    gap: 10px;
+  }
+  .eyebrow span {
+    width: 22px;
+  }
+  .hero h1 {
+    font-size: clamp(67px, 16.7vw, 127px);
+    line-height: 0.9;
+    letter-spacing: -0.6px;
+    margin-top: 22px;
+  }
+  .hero-title-glass {
+    margin-top: 5px;
+    color: #f5c9283b;
+    -webkit-text-stroke: 1.2px #ffe052f0;
+  }
+  .hero-bottom {
+    left: 6%;
+    right: 6%;
+    bottom: 70px;
+    display: flex;
+    align-items: end;
+    gap: 12px;
+  }
+  .hero-bottom p {
+    font-size: 13px;
+    line-height: 1.65;
+    max-width: 49%;
+    float: none;
+  }
+  .hero-bottom p span {
+    font-size: 11px;
+  }
+  .hero-bottom .button {
+    float: none;
+    padding: 14px 15px;
+    font-size: 10px;
+    gap: 10px;
+    letter-spacing: 0.7px;
+    flex-shrink: 0;
+  }
+  .hero-bottom .button svg {
+    width: 16px;
+  }
+  .scroll-cue {
+    bottom: 26px;
+    left: 6%;
+    font-size: 9px;
+    letter-spacing: 1.3px;
+    gap: 10px;
+  }
+  .hero-index {
+    bottom: 25px;
+    right: 6%;
+    font-size: 9px;
+    letter-spacing: 1.2px;
+  }
+  .hero-shade {
+    background: linear-gradient(
+      180deg,
+      #07080665 0%,
+      transparent 35%,
+      transparent 63%,
+      #07080680 82%,
+      #070806d0 100%
+    );
+  }
+}
+@media (max-width: 360px) {
+  .hero h1 {
+    font-size: 15.5vw;
+  }
+  .hero-copy {
+    top: 122px;
+  }
+  .hero-bottom {
+    gap: 10px;
+  }
+  .hero-bottom p {
+    font-size: 12px;
+  }
+  .hero-bottom p span {
+    font-size: 10px;
+  }
+  .hero-bottom .button {
+    padding: 13px 11px;
+    font-size: 9px;
+    gap: 7px;
+  }
+}
+@media (max-height: 650px) and (min-width: 801px) {
+  .hero-copy {
+    top: 110px;
+  }
+  .hero h1 {
+    font-size: clamp(76px, 10vw, 125px);
+  }
+  .hero-bottom {
+    bottom: 55px;
+  }
+  .scroll-cue {
+    bottom: 16px;
+  }
+  .hero-index {
+    bottom: 15px;
+  }
+}
+@media (max-height: 500px) and (max-width: 800px) {
+  .hero-copy {
+    top: 95px;
+    text-align: left;
+    left: 6%;
+    right: 30%;
+  }
+  .hero h1 {
+    font-size: clamp(45px, 10vw, 76px);
+    margin-top: 14px;
+  }
+  .eyebrow {
+    justify-content: flex-start;
+    font-size: 8px;
+  }
+  .hero-bottom {
+    bottom: 35px;
+  }
+  .hero-bottom p {
+    display: none;
+  }
+  .hero-bottom .button {
+    margin-left: auto;
+  }
+  .scroll-cue {
+    bottom: 15px;
+  }
+  .hero-index {
+    display: none;
+  }
+  .hero-image {
+    object-position: center 65%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-image,
+  .hero-copy {
+    transform: none !important;
+    will-change: auto;
+  }
+  .hero-smoke {
+    display: none;
+  }
+}
