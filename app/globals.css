@@ -409,7 +409,7 @@ h3 {
 .assembly-section {
   position: relative;
   height: 280svh;
-  background: #161712;
+  background: var(--background);
   --assembly: 0;
 }
 .assembly-sticky {
@@ -542,7 +542,7 @@ h3 {
 }
 /* Burger selection */
 .signature-section {
-  background: #10100e;
+  background: var(--background);
 }
 .signature-grid {
   display: grid;
@@ -632,7 +632,7 @@ h3 {
   position: relative;
   min-height: 640px;
   overflow: hidden;
-  background: #090a08;
+  background: var(--background);
   display: flex;
   align-items: center;
   padding: 90px 6%;
@@ -663,18 +663,18 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 100px;
-  background: #f4f0e6;
-  color: #191b13;
+  background: var(--background);
+  color: var(--foreground);
 }
 .story-strip em {
   color: #df3225;
 }
 .story-strip .section-kicker {
-  color: #6d6e61;
+  color: #aaa99e;
 }
 .story-strip p:not(.section-kicker) {
   font-size: 18px;
-  color: #65665a;
+  color: #b2b1a7;
   max-width: 420px;
   line-height: 1.9;
   margin-bottom: 22px;
