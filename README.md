@@ -45,6 +45,7 @@ React 19, TypeScript, Next.js App Router uyumlu Vinext/Vite, CSS animasyonları,
 - `components/hero.tsx`, `app/hero.css`: responsive hero ve saydam tipografi
 - `components/hero-smoke.tsx`: gerçek zamanlı türbülanslı duman shader’ı
 - `components/motion.tsx`: bölüm girişleri ve hero parallax
+- `components/smooth-scroll.tsx`: Lenis ile yumuşak tekerlek kaydırması; doğal dokunmatik kaydırma, sayfa içi bağlantılar, rota değişiminde temizlik ve canlı azaltılmış hareket tercihi desteği.
 - `lib/restaurant.ts`: şube bağlantıları ve menü verileri
 - `public/images/`: proje içinde tutulan tüm görseller
 - `docs/ASSETS.md`: kaynaklar ve görsel kullanım kapsamı

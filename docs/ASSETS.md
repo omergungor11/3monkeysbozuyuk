@@ -19,6 +19,18 @@ Kontrol tarihi: 18 Eylül 2026.
 - Sprite boyutu: 724 × 2172. CSS kesim sınırları: 0, 440, 780, 1125, 1480, 1800, 2172 piksel.
 - Sahne ürün fotoğrafları gerçek sunum veya reçete garantisi değildir. Arayüzde temsilî oldukları belirtilir.
 
+## 19 Eylül 2026 — Menü kartları
+
+Beş ayrı temsilî burger görseli yerleşik Imagegen ile üretildi. Her kart kendi ürün görselini kullanır; hero kırpımları veya vişneli burger fotoğrafı farklı ürünler için yeniden kullanılmaz.
+
+- `public/images/menu/cheeseburger.webp`
+- `public/images/menu/mushroom.webp`
+- `public/images/menu/honey-parmesan.webp`
+- `public/images/menu/truffle.webp`
+- `public/images/menu/beef-bacon.webp`
+
+1254 × 1254 çıktılar WebP formatında optimize edildi. Vişneli burger kartı kullanıcının sağladığı özgün fotoğrafı korur. Promptlar: [MENU-IMAGE-PROMPTS.md](MENU-IMAGE-PROMPTS.md).
+
 ## İşletme bilgileri
 
 - Resmî şube Instagram hesabı ve telefon: https://www.instagram.com/3monkeyburger_boz/

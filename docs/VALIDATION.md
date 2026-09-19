@@ -1,4 +1,16 @@
-# Doğrulama — 18 Eylül 2026
+# Doğrulama
+
+## 19 Eylül 2026 — Lenis ve menü görselleri
+
+- TypeScript ve üretim derlemesi başarılı; tarayıcıda çalışma hatası veya hata katmanı yok.
+- Lenis 1.3.26: tek 650 px tekerlek girdisinde ara kaydırma konumları 0 → 187 → 225 → 649 px olarak ölçüldü.
+- Ana sayfadan menüye istemci navigasyonu ve menü içi `#yaninda` bağlantısı doğrulandı.
+- Burger katmanları kaydırma ilerledikçe birleşiyor. Canlı azaltılmış hareket tercihinde Lenis kaldırılıyor ve birleşim tamamlanıyor.
+- 1440 px masaüstü ve 393 px mobil görünümde yatay taşma yok; altı kartın altı ayrı, başarıyla yüklenen görseli var.
+- Yeni kare görsellerde ürünün tamamı kadrajda. Beş WebP toplam yaklaşık 1.21 MB; tembel yükleme ve sabit en/boy oranı kullanılıyor.
+- Mobil kontrol tarayıcı görünüm emülasyonudur; fiziksel cihaz dokunmatik testi yapılmadı.
+
+## 18 Eylül 2026
 
 - `npm run typecheck`: başarılı.
 - `npm run build`: başarılı.

@@ -21,11 +21,14 @@ export default function HomeContent() {
         </div>
         <div className="signature-grid">
           <Link href="/menu#burgerler" className="signature-card" data-reveal>
-            <div className="card-image crop-center">
+            <div className="card-image">
               <img
-                src="/images/three-burgers-hero.png"
+                src="/images/menu/cheeseburger.webp"
                 alt="Cheddar peynirli burger konsepti"
+                width="1254"
+                height="1254"
                 loading="lazy"
+                decoding="async"
               />
               <span className="card-number">01</span>
             </div>
@@ -48,7 +51,10 @@ export default function HomeContent() {
               <img
                 src="/images/visne-original.png"
                 alt="3 Monkey vişne soslu burger fotoğrafı"
+                width="694"
+                height="700"
                 loading="lazy"
+                decoding="async"
               />
               <span className="card-number">02</span>
               <span className="card-tag">TATLI BİR TERS KÖŞE</span>
@@ -64,11 +70,14 @@ export default function HomeContent() {
             </p>
           </Link>
           <Link href="/menu#burgerler" className="signature-card" data-reveal>
-            <div className="card-image crop-right">
+            <div className="card-image">
               <img
-                src="/images/three-burgers-hero.png"
+                src="/images/menu/mushroom.webp"
                 alt="Mantarlı burger konsepti"
+                width="1254"
+                height="1254"
                 loading="lazy"
+                decoding="async"
               />
               <span className="card-number">03</span>
             </div>
@@ -83,16 +92,16 @@ export default function HomeContent() {
             </p>
           </Link>
           <Link href="/menu#burgerler" className="signature-card" data-reveal>
-            <div className="card-image crop-center">
-              <img src="/images/three-burgers-hero.png" alt="Monkey Honey burger konsepti" loading="lazy" />
+            <div className="card-image">
+              <img src="/images/menu/honey-parmesan.webp" alt="Ballı parmesan ve turşulu Monkey Honey burger konsepti" width="1254" height="1254" loading="lazy" decoding="async" />
               <span className="card-number">04</span>
             </div>
             <div className="card-heading"><h3>MONKEY HONEY</h3><ArrowUpRight /></div>
             <p>Ballı parmesan ve cheddarın tatlı-tuzlu dengesi.<br />Her lokmada küçük bir sürpriz.</p>
           </Link>
           <Link href="/menu#burgerler" className="signature-card" data-reveal>
-            <div className="card-image crop-right">
-              <img src="/images/three-burgers-hero.png" alt="Monkey Trüf burger konsepti" loading="lazy" />
+            <div className="card-image">
+              <img src="/images/menu/truffle.webp" alt="Trüflü mayonez ve karamelize soğanlı Monkey Trüf burger konsepti" width="1254" height="1254" loading="lazy" decoding="async" />
               <span className="card-number">05</span>
             </div>
             <div className="card-heading"><h3>MONKEY TRÜF</h3><ArrowUpRight /></div>
@@ -100,7 +109,7 @@ export default function HomeContent() {
           </Link>
           <Link href="/menu#burgerler" className="signature-card" data-reveal>
             <div className="card-image">
-              <img src="/images/visne-original.png" alt="Dana bacon burger konsepti" loading="lazy" />
+              <img src="/images/menu/beef-bacon.webp" alt="Dana bacon ve cheddar peynirli burger konsepti" width="1254" height="1254" loading="lazy" decoding="async" />
               <span className="card-number">06</span>
             </div>
             <div className="card-heading"><h3>DANA BACON</h3><ArrowUpRight /></div>
