@@ -1,5 +1,15 @@
 # Doğrulama
 
+## 19 Eylül 2026 — Başlıklar ve giriş animasyonları
+
+- TypeScript kontrolü ve üretim derlemesi başarılı.
+- Tamamen kırpılan gözlem hedefleri başlıkların görünürlük tetikleyicisini engelliyordu; başlık maskesi kaldırılarak fade/yükselme geçişi kullanıldı.
+- Ana sayfa, menü, hikâyemiz ve iletişim sayfalarında başlıklar, metinler ve bağlantılar kaydırmayla görünür oluyor. İstemci tarafındaki sayfa geçişleri doğrulandı.
+- Altı ana sayfa menü kartı masaüstünde sıra gecikmesiyle, mobilde ekrana girdikçe açılıyor; görseller ve kart metinleri ayrı geçişler kullanıyor.
+- 393 × 852 mobil görünümde hero tam ekran; yatay taşma yok. Hero başlığının iki satırında başlangıç, ara ve bitiş durumları ölçüldü; animasyon sonunda opaklık 1.
+- Azaltılmış hareket tercihinde hero animasyonları ve Lenis kapanıyor; tüm bölüm içerikleri görünür kalıyor. Tarayıcıda çalışma hatası yok.
+- Mobil kontrol tarayıcı görünüm emülasyonudur; fiziksel cihaz testi yapılmadı.
+
 ## 19 Eylül 2026 — Lenis ve menü görselleri
 
 - TypeScript ve üretim derlemesi başarılı; tarayıcıda çalışma hatası veya hata katmanı yok.
