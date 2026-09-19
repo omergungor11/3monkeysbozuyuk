@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "lenis/dist/lenis.css";
 import "./globals.css";
 import "./hero.css";
+import "./motion.css";
 import SiteHeader from "@/components/site-header";
 import SiteFooter from "@/components/site-footer";
 import Motion from "@/components/motion";

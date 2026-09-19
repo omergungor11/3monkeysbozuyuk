@@ -9,8 +9,9 @@
 - Üç fotogerçekçi burger içeren sinematik ana ekran.
 - Kaydırdıkça birleşen altı fotoğraf katmanı: üst ekmek, sos/eşlikçiler, cheddar, dana köftesi, yeşillik ve alt ekmek.
 - CSS perspektifli **2.5D** sahne; WebGL modeli gerektirmez.
-- Tam ekran responsive hero, mobil için ayrı dikey kompozisyon, yarı saydam konturlu başlık ve gerçek zamanlı WebGL duman simülasyonu.
-- Parallax, bölüm/sayfa girişleri ve hover animasyonları.
+- Tam ekran responsive hero, mobil için ayrı dikey kompozisyon, marka renklerinde başlık ve gerçek zamanlı WebGL duman simülasyonu.
+- Hero yazısında sıralı fade/pop girişi; bölüm başlıklarında, açıklamalarda ve menü kartlarında kaydırmayla tetiklenen girişler.
+- Parallax ve hover animasyonları.
 - Ayrı ana sayfa, menü, hikâyemiz ve iletişim sayfaları.
 - Klavye ile kullanılabilen mobil navigasyon, Escape desteği, azaltılmış hareket tercihi.
 - Gerçek telefon, Instagram, harita ve güncel menü bağlantıları.
@@ -42,9 +43,9 @@ React 19, TypeScript, Next.js App Router uyumlu Vinext/Vite, CSS animasyonları,
 
 - `app/`: sayfalar, ortak düzen ve tasarım stilleri
 - `components/burger-assembly.tsx`: katmanların kaydırmaya bağlı birleşmesi
-- `components/hero.tsx`, `app/hero.css`: responsive hero ve saydam tipografi
+- `components/hero.tsx`, `app/hero.css`: responsive hero ve marka tipografisi
 - `components/hero-smoke.tsx`: gerçek zamanlı türbülanslı duman shader’ı
-- `components/motion.tsx`: bölüm girişleri ve hero parallax
+- `components/motion.tsx`, `app/motion.css`: bölüm/kart girişleri, hero yazı animasyonları ve parallax; JavaScript olmadan görünür içerik ve azaltılmış hareket desteği
 - `components/smooth-scroll.tsx`: Lenis ile yumuşak tekerlek kaydırması; doğal dokunmatik kaydırma, sayfa içi bağlantılar, rota değişiminde temizlik ve canlı azaltılmış hareket tercihi desteği.
 - `lib/restaurant.ts`: şube bağlantıları ve menü verileri
 - `public/images/`: proje içinde tutulan tüm görseller

@@ -11,22 +11,22 @@ export default function About() {
   return (
     <main id="main-content" className="inner-page">
       <section className="page-heading section-pad">
-        <p className="section-kicker">3 MONKEY / HİKÂYEMİZ</p>
-        <h1>
+        <p data-reveal="eyebrow" className="section-kicker">3 MONKEY / HİKÂYEMİZ</p>
+        <h1 data-reveal="heading">
           BURGERİ CİDDİYE.
           <br />
           <em>HAYATI KEYFE AL.</em>
         </h1>
         <div className="page-heading-bottom">
-          <p>
+          <p data-reveal="text">
             Bir burgerden beklediğin her şey.
             <br />
             Bir de beklemediğin lezzetler.
           </p>
-          <span className="location-label">BOZÜYÜK, BİLECİK ↗</span>
+          <span data-reveal="text" className="location-label">BOZÜYÜK, BİLECİK ↗</span>
         </div>
       </section>
-      <section className="about-image">
+      <section data-reveal="image" className="about-image">
         <img
           src="/images/three-burgers-hero.png"
           alt="3 Monkey ruhunu yansıtan üç burger konsepti"
@@ -34,9 +34,9 @@ export default function About() {
         />
       </section>
       <section className="about-story section-pad">
-        <div data-reveal>
-          <p className="section-kicker">BİZİM MESELEMİZ</p>
-          <h2>
+        <div>
+          <p data-reveal="eyebrow" className="section-kicker">BİZİM MESELEMİZ</p>
+          <h2 data-reveal="heading">
             İYİ LEZZET.
             <br />
             İYİ MUHABBET.
@@ -44,44 +44,44 @@ export default function About() {
             <em>AYNI MASA.</em>
           </h2>
         </div>
-        <div className="prose" data-reveal>
-          <p>
+        <div className="prose">
+          <p data-reveal="text">
             3 Monkey Burger House, Bozüyük’te burger etrafında buluşmak
             isteyenlerin adresi. Bazen tanıdık bir cheeseburger, bazen de “bir
             de bunu deneyeyim” dedirten bir lezzet.
           </p>
-          <p>
+          <p data-reveal="text">
             Menümüzde cheddar’ın klasiğine de, vişne reçeli ve Erzurum tulumunun
             şaşırtan uyumuna da yer var. Çünkü her iştahın ayrı bir karakteri
             olduğuna inanıyoruz.
           </p>
-          <p>
+          <p data-reveal="text">
             Arkadaşlarını topla. Kendine bir burger seç. Gerisini masadaki
             muhabbet tamamlasın.
           </p>
-          <Link className="text-link" href="/menu">
+          <Link className="text-link" data-reveal="action" href="/menu">
             Kendi lezzetini bul <ArrowUpRight size={20} />
           </Link>
         </div>
       </section>
-      <section className="manifesto section-pad" data-reveal>
-        <span className="section-kicker">ÜÇ MAYMUN. ÜÇ KELİME.</span>
+      <section className="manifesto section-pad">
+        <span data-reveal="eyebrow" className="section-kicker">ÜÇ MAYMUN. ÜÇ KELİME.</span>
         <div>
-          <span>İŞTAH.</span>
-          <span>TUTKU.</span>
-          <em>PAYLAŞ.</em>
+          <span data-reveal="heading">İŞTAH.</span>
+          <span data-reveal="heading">TUTKU.</span>
+          <em data-reveal="heading">PAYLAŞ.</em>
         </div>
       </section>
-      <section className="social-section section-pad" data-reveal>
+      <section className="social-section section-pad">
         <Instagram size={36} />
-        <h2>
+        <h2 data-reveal="heading">
           MUTFAKTAN
           <br />
           <em>AKIŞINA.</em>
         </h2>
-        <p>Yeni lezzetler, masadan kareler ve Bozüyük’ten anlar.</p>
+        <p data-reveal="text">Yeni lezzetler, masadan kareler ve Bozüyük’ten anlar.</p>
         <a
-          className="button yellow"
+          className="button yellow" data-reveal="action"
           href={restaurant.instagram}
           target="_blank"
           rel="noopener noreferrer"

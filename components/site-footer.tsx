@@ -16,7 +16,7 @@ export default function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="footer-center">
-        <Link className="footer-logo" href="/" aria-label="Ana sayfa">
+        <Link className="footer-logo" data-reveal="image" href="/" aria-label="Ana sayfa">
           <img
             src="/images/3-monkey-logo-transparent.png"
             alt="3 Monkey Burger House"
@@ -24,7 +24,7 @@ export default function SiteFooter() {
             height="90"
           />
         </Link>
-        <div className="footer-socials" aria-label="Sosyal ve iletişim bağlantıları">
+        <div className="footer-socials" data-reveal="action" aria-label="Sosyal ve iletişim bağlantıları">
           <a href={restaurant.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <InstagramGlyph />
           </a>
@@ -35,13 +35,13 @@ export default function SiteFooter() {
             <MapPin size={20} />
           </a>
         </div>
-        <p className="footer-address">{restaurant.address}</p>
-        <nav className="footer-nav" aria-label="Alt menü">
+        <p className="footer-address" data-reveal="text">{restaurant.address}</p>
+        <nav className="footer-nav" data-reveal="action" aria-label="Alt menü">
           <Link href="/menu">Menü</Link>
           <Link href="/hakkimizda">Hikâyemiz</Link>
           <Link href="/iletisim">İletişim</Link>
         </nav>
-        <p className="footer-copyright">© 2026 3 Monkey Burger House · Konsept çalışma</p>
+        <p className="footer-copyright" data-reveal="text">© 2026 3 Monkey Burger House · Konsept çalışma</p>
       </div>
     </footer>
   );

@@ -6,21 +6,21 @@ export default function HomeContent() {
     <>
       <BurgerAssembly />
       <section className="signature-section section-pad">
-        <div className="section-heading" data-reveal>
+        <div className="section-heading">
           <div>
-            <p className="section-kicker">02 / SENİN TARAFIN HANGİSİ?</p>
-            <h2>
+            <p data-reveal="eyebrow" className="section-kicker">02 / SENİN TARAFIN HANGİSİ?</p>
+            <h2 data-reveal="heading">
               AYNI KALİTE.
               <br />
               <em>BAŞKA KARAKTERLER.</em>
             </h2>
           </div>
-          <Link href="/menu" className="text-link">
+          <Link href="/menu" className="text-link" data-reveal="action">
             Bütün menüyü gör <ArrowUpRight size={20} />
           </Link>
         </div>
         <div className="signature-grid">
-          <Link href="/menu#burgerler" className="signature-card" data-reveal>
+          <Link href="/menu#burgerler" className="signature-card" data-reveal="card">
             <div className="card-image">
               <img
                 src="/images/menu/cheeseburger.webp"
@@ -45,7 +45,7 @@ export default function HomeContent() {
           <Link
             href="/menu#burgerler"
             className="signature-card featured"
-            data-reveal
+            data-reveal="card"
           >
             <div className="card-image">
               <img
@@ -69,7 +69,7 @@ export default function HomeContent() {
               Alıştığının bir ısırık ötesi.
             </p>
           </Link>
-          <Link href="/menu#burgerler" className="signature-card" data-reveal>
+          <Link href="/menu#burgerler" className="signature-card" data-reveal="card">
             <div className="card-image">
               <img
                 src="/images/menu/mushroom.webp"
@@ -91,7 +91,7 @@ export default function HomeContent() {
               Kendine has bir lezzet.
             </p>
           </Link>
-          <Link href="/menu#burgerler" className="signature-card" data-reveal>
+          <Link href="/menu#burgerler" className="signature-card" data-reveal="card">
             <div className="card-image">
               <img src="/images/menu/honey-parmesan.webp" alt="Ballı parmesan ve turşulu Monkey Honey burger konsepti" width="1254" height="1254" loading="lazy" decoding="async" />
               <span className="card-number">04</span>
@@ -99,7 +99,7 @@ export default function HomeContent() {
             <div className="card-heading"><h3>MONKEY HONEY</h3><ArrowUpRight /></div>
             <p>Ballı parmesan ve cheddarın tatlı-tuzlu dengesi.<br />Her lokmada küçük bir sürpriz.</p>
           </Link>
-          <Link href="/menu#burgerler" className="signature-card" data-reveal>
+          <Link href="/menu#burgerler" className="signature-card" data-reveal="card">
             <div className="card-image">
               <img src="/images/menu/truffle.webp" alt="Trüflü mayonez ve karamelize soğanlı Monkey Trüf burger konsepti" width="1254" height="1254" loading="lazy" decoding="async" />
               <span className="card-number">05</span>
@@ -107,7 +107,7 @@ export default function HomeContent() {
             <div className="card-heading"><h3>MONKEY TRÜF</h3><ArrowUpRight /></div>
             <p>Trüflü mayonez, cheddar ve karamelize soğan.<br />Yoğun ama dengeli bir tat.</p>
           </Link>
-          <Link href="/menu#burgerler" className="signature-card" data-reveal>
+          <Link href="/menu#burgerler" className="signature-card" data-reveal="card">
             <div className="card-image">
               <img src="/images/menu/beef-bacon.webp" alt="Dana bacon ve cheddar peynirli burger konsepti" width="1254" height="1254" loading="lazy" decoding="async" />
               <span className="card-number">06</span>
@@ -118,22 +118,22 @@ export default function HomeContent() {
         </div>
       </section>
       <section className="story-strip section-pad">
-        <div className="story-copy" data-reveal>
-          <p className="section-kicker">İYİ BURGER, GÜZEL MUHABBET.</p>
-          <h2>
+        <div className="story-copy">
+          <p data-reveal="eyebrow" className="section-kicker">İYİ BURGER, GÜZEL MUHABBET.</p>
+          <h2 data-reveal="heading">
             BİZİ BİR DE
             <br />
             <em>YAKINDAN TANI.</em>
           </h2>
-          <p>
+          <p data-reveal="text">
             Klasik bir cheeseburger’den vişnenin sürprizine uzanan bir menü.
             Bozüyük’te bir masanın etrafında buluşmak için bolca sebep.
           </p>
-          <Link href="/hakkimizda" className="text-link">
+          <Link href="/hakkimizda" className="text-link" data-reveal="action">
             Hikâyemiz <ArrowUpRight size={20} />
           </Link>
         </div>
-        <div className="story-visual" data-reveal aria-label="3 Monkey Burger House Bozüyük dış cephesi">
+        <div className="story-visual" data-reveal="image" aria-label="3 Monkey Burger House Bozüyük dış cephesi">
           <div className="story-photo">
             <img
               src="/images/3-monkey-storefront.png"

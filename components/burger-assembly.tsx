@@ -118,8 +118,8 @@ export default function BurgerAssembly() {
     >
       <div className="assembly-sticky">
         <div className="assembly-intro">
-          <p className="section-kicker">01 / İŞİN İÇ YÜZÜ</p>
-          <h2 id="assembly-title">
+          <p data-reveal="eyebrow" className="section-kicker">01 / İŞİN İÇ YÜZÜ</p>
+          <h2 data-reveal="heading" id="assembly-title">
             İYİ BURGER.
             <br />
             <em>
@@ -128,13 +128,13 @@ export default function BurgerAssembly() {
               KATMAN.
             </em>
           </h2>
-          <p>
+          <p data-reveal="text">
             Birbirinden farklı karakterler.
             <br />
             Bir araya gelince tam bir 3 Monkey.
           </p>
           {!reduced && (
-            <div className="assembly-instruction">
+            <div className="assembly-instruction" data-reveal="action">
               <ArrowDown size={18} />
               <span>Kaydır. Lezzet bir araya gelsin.</span>
             </div>
@@ -174,9 +174,9 @@ export default function BurgerAssembly() {
           ))}
         </div>
         <div className="ingredient-notes">
-          <p className="section-kicker">HER PARÇASI BİR SEBEP</p>
+          <p data-reveal="eyebrow" className="section-kicker">HER PARÇASI BİR SEBEP</p>
           {layers.map((layer, i) => (
-            <div className="ingredient-note" key={layer.name}>
+            <div className="ingredient-note" data-reveal="text" key={layer.name}>
               <span>0{i + 1}</span>
               <div>
                 <h3>{layer.name}</h3>

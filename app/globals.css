@@ -355,23 +355,6 @@ h3 {
 .text-button:hover {
   color: var(--secondary);
 }
-[data-reveal].reveal-ready {
-  opacity: 0;
-  transform: translateY(34px);
-  transition:
-    opacity 0.85s ease,
-    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
-}
-[data-reveal].is-visible {
-  opacity: 1;
-  transform: none;
-}
-.signature-card:nth-child(2) {
-  transition-delay: 0.1s;
-}
-.signature-card:nth-child(3) {
-  transition-delay: 0.2s;
-}
 .ticker {
   position: relative;
   z-index: 3;
@@ -733,7 +716,6 @@ h3 {
 /* Interior pages */
 .inner-page {
   padding-top: 100px;
-  animation: enter 0.6s ease both;
 }
 .page-heading {
   padding-top: 78px;
@@ -1182,9 +1164,6 @@ h3 {
   }
   .signature-card > p {
     font-size: 14px;
-  }
-  .signature-card:nth-child(n) {
-    transition-delay: 0s;
   }
   .story-strip {
     grid-template-columns: 1fr;
